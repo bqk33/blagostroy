@@ -22,19 +22,19 @@ class RecyclerActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         binding = RecyclerviewTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        init()
+        //init()
     }
 
-    private fun init(){
-        binding.apply {
-            rcView.layoutManager = GridLayoutManager(this@RecyclerActivity, 2)
-            rcView.adapter = adapter
-            buttonAdd.setOnClickListener {
-                if (index > 4) index = 0
-                val plant = Plant(imageIdList[index], "Tiles $index")
-                adapter.addPlant(plant)
-                index++
-            }
-        }
-    }
+    //private fun init(){
+    //    binding.apply {
+    //        rcView.layoutManager = GridLayoutManager(this@RecyclerActivity, 2)
+    //        rcView.adapter = adapter
+    //        buttonAdd.setOnClickListener {
+    //            if (index > 4) index = 0
+    //            val plant = Plant(imageIdList[index], "Tiles $index")
+    //            adapter.addPlant(plant)
+    //            index++
+    //        }
+    //    }
+    //}
 }

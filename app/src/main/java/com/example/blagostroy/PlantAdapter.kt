@@ -1,18 +1,35 @@
 package com.example.blagostroy
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.blagostroy.databinding.DialogLayoutBinding
 import com.example.blagostroy.databinding.PlantItemBinding
 
-class PlantAdapter: RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
+class PlantAdapter(): RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
     val plantList = ArrayList<Plant>()
     class PlantHolder(item: View): RecyclerView.ViewHolder(item) {
         val binding = PlantItemBinding.bind(item)
         fun bind(plant: Plant) = with(binding){
             im.setImageResource(plant.imageId)
             tvTitle.text = plant.title
+            buttonDesc.setOnClickListener{
+                val dialogBuilder = AlertDialog.Builder(itemView.context)
+                val dialogView = LayoutInflater.from(itemView.context).inflate(R.layout.dialog_layout, null)
+                val dialogBinding = DialogLayoutBinding.bind(dialogView)
+                dialogBinding.dialogTitle.text = plant.title
+                dialogBinding.dialogImage.setImageResource(plant.imageId)
+                dialogBuilder.setView(dialogView)
+                    .setPositiveButton("ОК") { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .create()
+                    .show()
+            }
         }
     }
 
