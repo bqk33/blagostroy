@@ -19,13 +19,45 @@
             android:id="@+id/dialogTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_margin="5dp"
+            android:text="Name" />
 
         <ImageView
             android:id="@+id/dialogImage"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             app:srcCompat="@drawable/tiles1" />
+
+        <TextView
+            android:id="@+id/dialogTitleDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Desc" />
+
+        <TextView
+            android:id="@+id/dialogTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Size" />
+
+        <TextView
+            android:id="@+id/dialogTitleCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Count" />
+
+        <TextView
+            android:id="@+id/dialogTitleColors"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Colors"
+            android:textAlignment="textStart" />
 
     </LinearLayout>
 

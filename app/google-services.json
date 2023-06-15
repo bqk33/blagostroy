@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "78540100241",
+    "project_id": "blagostroy-2a9a2",
+    "storage_bucket": "blagostroy-2a9a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78540100241:android:37c27e1dc4069300b02530",
+        "android_client_info": {
+          "package_name": "com.example.blagostroy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78540100241-df95qh1s0p2lpaelhuajhf27r5kkbcdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB98oX4HvG8d-o283VABSlWMXRET38MoeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78540100241-df95qh1s0p2lpaelhuajhf27r5kkbcdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,12 +17,17 @@ class PlantAdapter(): RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
         fun bind(plant: Plant) = with(binding){
             im.setImageResource(plant.imageId)
             tvTitle.text = plant.title
+            tvTitle2.text = plant.size
             buttonDesc.setOnClickListener{
                 val dialogBuilder = AlertDialog.Builder(itemView.context)
                 val dialogView = LayoutInflater.from(itemView.context).inflate(R.layout.dialog_layout, null)
                 val dialogBinding = DialogLayoutBinding.bind(dialogView)
                 dialogBinding.dialogTitle.text = plant.title
                 dialogBinding.dialogImage.setImageResource(plant.imageId)
+                dialogBinding.dialogTitleDesc.text = "Описание:"
+                dialogBinding.dialogTitle2.text = "Размер: ${plant.size}"
+                dialogBinding.dialogTitleCount.text = "Количество м2/шт в пачке: ${plant.count}"
+                dialogBinding.dialogTitleColors.text = " Цвета:\n ${plant.color}"
                 dialogBuilder.setView(dialogView)
                     .setPositiveButton("ОК") { dialog, _ ->
                         dialog.dismiss()

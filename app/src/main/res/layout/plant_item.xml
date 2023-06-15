@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:background="#FFFFFF">
+    android:layout_margin="3dp"
+    android:background="#E1E1E1">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -39,7 +39,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="TextView"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Size"
                 android:textColor="#000000"
                 android:textStyle="bold" />
 
@@ -47,7 +58,9 @@
                 android:id="@+id/buttonDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/desc" />
+                android:backgroundTint="#3E98AE"
+                android:text="@string/desc"
+                android:textSize="16sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

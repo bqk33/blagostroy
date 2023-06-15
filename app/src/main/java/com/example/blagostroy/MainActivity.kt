@@ -1,19 +1,28 @@
 package com.example.blagostroy
 
+
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.blagostroy.databinding.ActivityMainBinding
+import com.google.firebase.storage.FirebaseStorage
+import java.io.File
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass : ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+
+//        loadAndDisplayImage()
 
         supportFragmentManager
             .beginTransaction()
